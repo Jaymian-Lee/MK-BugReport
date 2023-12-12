@@ -22,8 +22,8 @@ Dit is een eenvoudig formulier voor het melden van bugs op een website. Het form
 
 ## Installatie
 
-1. Clone de repository: `git clone https://github.com/gebruikersnaam/bugmeldingsformulier.git`
-2. Navigeer naar de projectdirectory: `cd bugmeldingsformulier`
+1. Clone de repository: `git clone https://github.com/Jaymian-Lee/MK-Help.git`
+2. Navigeer naar de projectdirectory: `cd MK-Help`
 3. Open het HTML-bestand in een webbrowser.
 
 ## Bijdragen
