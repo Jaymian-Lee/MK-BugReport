@@ -1,6 +1,5 @@
 # MK-Help
 Custom Google Forms bug report
-Natuurlijk, hier is een voorbeeld van een GitHub-beschrijving op basis van de eerder verstrekte informatie:
 
 ---
 
