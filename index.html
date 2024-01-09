@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Martijn Kozijn bug formulier">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Martijn Kozijn bug formulier</title>
     <style>
@@ -9,7 +11,7 @@
             background-image: url(./img/circle.jpg); /* Witte achtergrond voor een schone look */
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: calc(50% - 0px) 25%;
+            background-position: center;
             color: #333; /* Basis zwarte tekst voor eenvoud */
             font-family: 'Roboto', sans-serif; /* Eenvoudige en moderne lettertype */
             margin: 0;
@@ -213,7 +215,7 @@
       <h2>Bug formulier</h2>
       <h3>( een bug is een fout in het systeem )</h3>
 
-      <label>Wat is je naam?<span class="help-icon" onclick="toggleHelp('help-name')">Help</span></label>
+      <label>Wat is je naam?<!--<span class="help-icon" onclick="toggleHelp('help-name')">Help</span>--></label>
         <div class="help-text" id="help-name">Vul hier je volledige naam in.</div>
       
       <input type="text" name="entry.2145981883" placeholder="Volledige naam"/>
