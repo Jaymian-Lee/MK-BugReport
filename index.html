@@ -11,7 +11,7 @@
             background-size: cover;
             background-position: calc(50% - 0px) 25%;
             color: #333; /* Basis zwarte tekst voor eenvoud */
-            font-family: "Arial", sans-serif; /* Eenvoudige en moderne lettertype */
+            font-family: Verdana, Geneva, Tahoma, sans-serif; /* Eenvoudige en moderne lettertype */
             margin: 0;
             padding: 0;
             display: flex;
@@ -81,6 +81,25 @@
         .hidden {
             display: none;
         }
+
+        .help-icon {
+           display: inline-block;
+           margin-left: 10px;
+           cursor: pointer;
+           color: #E51420;
+           float: right;
+       }
+       .help-text {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+           display: none;
+           color: #323232;
+           border: 1px solid #323232;
+           border-radius: 8px;
+           padding: 5px;
+           font-weight: 700;
+           margin: 5px;
+           width: 300px;
+       }
     </style>
 
     <script>
@@ -171,6 +190,12 @@
             tweedeBugDiv.style.display = this.checked ? "block" : "none";
           });
       });
+
+      function toggleHelp(helpId) {
+            var helpDiv = document.getElementById(helpId);
+            helpDiv.style.display = helpDiv.style.display === 'block' ? 'none' : 'block';
+        }
+
     </script>
   </head>
 
@@ -179,12 +204,16 @@
       method="post"
       action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeY3rSHX418rtIAO8lradQgU9S3DJPFBGl_S3TMiKEdnVaSaw/formResponse"
     >
-    <img src="https://www.wallgrind05.nl/img/logo-1669651557.jpg" alt="Wallgrind05 logo" width="100%" style="border-radius: 8px;">
+    <a href="https://www.wallgrind05.nl/"><img src="https://www.wallgrind05.nl/img/logo-1669651557.jpg" alt="Wallgrind05 logo" width="100%" style="border-radius: 8px;"></a>
     <hr>
       <h2>Bug formulier</h2>
       <h3>( een bug is een fout in het systeem )</h3>
-      <label>Wat is je naam?</label>
+
+      <label>Wat is je naam?<span class="help-icon" onclick="toggleHelp('help-name')">Help</span></label>
+        <div class="help-text" id="help-name">Vul hier je volledige naam in.</div>
+      
       <input type="text" name="entry.2145981883" placeholder="Volledige naam"/>
+     
       <!--Eerste bug-->
       <label>Waar staat de bug?</label>
       <select name="entry.2009510255">
@@ -228,13 +257,13 @@
 
       <label>Omschrijf de bug en geef eventueel een oplossing:</label>
       <textarea name="entry.1159318438" rows="4" cols="50"></textarea>
-
+<!--
       <input type="checkbox" name="2eBug" id="2eBug" />
       <label for="2eBug" style="margin: -20px 0px 15px 25px"
         >Nog een bug toevoegen</label
       >
 
-      <!--Tweede bug (keuze)-->
+      Tweede bug (keuze)
 
       <div id="tweedeBug" style="display: none">
         <hr>
@@ -292,7 +321,7 @@
         <label>Omschrijf de bug en geef eventueel een oplossing:</label>
         <textarea name="entry.1824645668" rows="4" cols="50"></textarea>
       </div>
-
+-->
       <input type="submit" value="Verzenden" />
     </form>
   </body>
